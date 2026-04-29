@@ -1,0 +1,606 @@
+/* RESET */
+/*se resetean margenes, padding y se establece box-sizing para evitar problemas de diseño y asegurar que los elementos se comporten de manera predecible en diferentes navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES DE COLOR */
+/*se definen variables de color para mantener una paleta consistente en todo el sitio y facilitar futuros cambios de diseño*/
+
+:root {
+    --azul: #294DCF;
+    --gris: #86888F;
+    --verde: #26A619;
+    --naranja: #E8730C;
+    --blanco: #ffffff;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--gris);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.logo{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+logo a:hover {
+    color:var(--verde) ;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--naranja);
+}
+/*aqui hacemos que al interactuar con nav ademas de cambiar de color , se agrande un poco el texto para darle un efecto mas dinamico y atractivo al usuario*/
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.3);
+}
+
+/* MAIN */
+main {
+    padding: 2rem;
+}
+
+/* HERO */
+#hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#title-hero {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+    text-shadow: #302B26 2px 2px 4px;
+}
+
+/* ANIMACION SLIDE LEFT TO RIGHT */
+/* aqui se define una animacion llamada slideInLeft que hace que los elementos aparezcan desde la izquierda con un efecto de deslizamiento y aumento de opacidad, lo que le da un toque moderno y atractivo al sitio web */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* APLICACION AL H2 DEL HERO */
+/* se aplica la animacion slideInLeft al h2 del hero para que tenga un efecto de entrada suave y llamativa, mejorando la experiencia del usuario al visitar la pagina */
+#hero h2 {
+    animation: slideInLeft 1s ease-out;
+}
+
+#title-servicios {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+    text-shadow: #302B26 2px 2px 4px;
+    animation: slideInLeft 1s ease-out;
+    text-align: center;
+}
+
+#title-contacto {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+    text-shadow: #302B26 2px 2px 4px;
+    animation: slideInLeft 1s ease-out;
+    
+}
+
+#contacto h2 {
+    text-align: center;
+
+}
+#qrcode {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+   
+}
+
+div.qr-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+    height:100%;
+}
+
+div.qr-box img {
+    width: 150px;
+    height: 150px;
+    box-shadow: black 0px 4px 10px;
+}
+
+div.qr-box h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: #302B26 1px 1px 2px;
+}
+
+div.qr-box p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    
+}
+/* SERVICIOS GRID */
+#servicios {
+    display: grid;
+    gap: 1.5rem;
+}
+
+#servicios article {
+    background: rgba(0,0,0,0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+/* aqui se agrega un efecto de hover a los articulos de servicios para que al pasar el mouse por encima, el articulo se eleve ligeramente, lo que le da un toque interactivo y moderno al sitio web */
+#servicios article:hover {
+    transform: translateY(-5px);
+}
+
+/* TITULOS */
+h2 {
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: var(--naranja);
+}
+
+#title-que {
+    font-size: 2rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    text-shadow: #302B26 2px 2px 4px;
+    text-align: center;
+    
+}
+
+section p {
+    font-size: 1.2rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    text-shadow: #302B26 1px 1px 2px;
+    text-align: center;
+}
+
+.cita{
+    font-size: 1.5rem;
+    font-style: italic;
+    border-left: 5px solid #ff6600;
+    padding-left: 15px;
+    color: #444;
+    text-align: end;
+}
+
+.autor{
+    margin-left: 20px;
+    font-weight: bold;
+    color: #ff6600;
+    text-align: end;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+/* ASIDE */
+aside {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-weight: bold;
+    box-shadow: #302B26 0px 4px 10px;
+}
+
+/* Hover */
+button:hover {
+    background-color: var(--naranja);
+}
+
+/* Click (efecto hundido) */
+button:active {
+    transform: translateY(3px); /* baja el botón */
+    box-shadow: #302B26 0px 2px 5px; /* sombra más chica */
+}
+
+/*aside complementario */
+
+#redes{
+    width: 370px;
+    height: 170px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-self: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--azul);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+/* ------------------ */
+/* MEDIA QUERIES */
+/* ------------------ */
+/* con las media queries se asegura que el sitio web sea responsive y se adapte a diferentes tamaños de pantalla, mejorando la experiencia del usuario en dispositivos móviles, tabletas y computadoras de escritorio */
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    #servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   #qrcode {
+       
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        justify-self: center;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    #servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+        max-width: 1200px;
+        margin: auto;
+    }
+    #qrcode {
+       
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        justify-self: center;
+    }
+}
+
+/* WHATSAPP FLOAT */
+/* se crea un boton flotante de whatsapp que se posiciona en la esquina inferior derecha de la pantalla, con un diseño atractivo y un efecto de hover para mejorar la interacción del usuario y facilitar el contacto a través de esta plataforma de mensajería */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #26A619;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp:hover {
+    background-color: #E8730C;
+    transform: scale(1.1);
+}
+
+
+/* CONTENEDOR GENERAL */
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* FORM BOX */
+.form-box {
+    background: rgba(0,0,0,0.25);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    flex: 1;
+}
+
+/* CAMPOS */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+    color: #ccc;
+}
+
+/* INPUTS */
+input, textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+/* BOTON CHICO */
+.form-box button {
+    width: fit-content;
+    padding: 6px 15px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+}
+
+/* QR BOX */
+.qr-box {
+    text-align: center;
+    background: rgba(0,0,0,0.25);
+    padding: 1.5rem;
+    margin: 1.5rem;
+    right: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    top: 1rem;
+    width: 50%;
+    height: 50%;
+    justify-items: center;
+    
+
+}
+
+#qrcode{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 50%;
+    height: 80%;
+}
+
+.qr-box h2 {
+    
+    text-shadow: #302B26 1px 1px 2px;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.qr-box p {
+  
+    text-shadow: #302B26 1px 1px 2px;
+    text-align: center;
+    padding: 0.5rem;
+}
+.qr-box img {
+    width: 180px;
+    margin: 1rem 0;
+    padding:1 rem; ;
+    box-shadow: black 0px 4px 10px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+    .contacto-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .form-box {
+        max-width: 500px;
+    }
+
+    .qr-box {
+        flex: 1;
+    }
+    #qrcode {
+       
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        justify-self: center;
+    }
+}
+
+/* SERVICIOS PAGE */
+#servicios-page {
+    margin-top: 2rem;
+}
+
+#servicios-page h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* GRID */
+.servicios-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* CARD */
+.card {
+    background: rgba(0,0,0,0.25);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+/* HOVER */
+/* aqui se agrega un efecto de hover a las tarjetas de servicios para que al pasar el mouse por encima, la tarjeta se eleve ligeramente, lo que le da un toque interactivo y moderno al sitio web */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* TITULOS */
+.card h3 {
+    margin-bottom: 10px;
+    color: #E8730C;
+}
+
+/* RESPONSIVE */
+
+/* TABLET */
+@media (min-width: 768px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .servicios-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*carrousel*/
+
+/* CONTENEDOR */
+.carousel{
+    width:90%;
+    overflow:hidden;
+    padding:20px 0;
+}
+
+/* TRACK */
+.carousel-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation:scroll 18s linear infinite;
+}
+
+/* CARDS */
+.card-carrousel{
+    width:250px;
+    height:350px;
+    border-radius:20px;
+    overflow:hidden;
+    flex-shrink:0;
+    position:relative;
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+    transition:transform 0.4s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card-carrousel img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ANIMACION */
+@keyframes scroll{
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-50%);
+    }
+}
+
+/* PAUSA AL PASAR EL MOUSE */
+.carousel-track:hover{
+    animation-play-state:paused;
+}
