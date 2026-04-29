@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTEGRAL LUCIANO</title>
+    <meta name="description" content="Descripción breve de la página">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+ <!-- Encabezado -->
+    <header>
+         <div class="logo">
+            <img src="img/logointegral.png" alt="logo de Integral Luciano"  width="200px" height="150px">
+            <h1>INTEGRAL LUCIANO</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section id="contacto">
+        <h2 id="title-contacto">Contacto</h2>
+
+        <form>
+            <input 
+                type="text" 
+                name="nombre" 
+                placeholder="Nombre completo" 
+                required 
+                minlength="3"
+            >
+
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Correo electrónico" 
+                required
+            >
+
+            <textarea 
+                name="mensaje" 
+                placeholder="Escribí tu mensaje" 
+                required 
+                minlength="10"
+            ></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <section id="qrcode">
+         <!-- QR -->
+        <div class="qr-box">
+        <h2>Contactános por WhatsApp</h2>
+        <img src="img/qrcode.png" alt="QR WhatsApp">
+        <p>Escaneá y chateá directo</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Zadikdesign - Todos los derechos reservados</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/543517529016" class="whatsapp" target="_blank">
+    💬
+</a>
+
+</body>
+</html>
